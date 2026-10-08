@@ -1,13 +1,61 @@
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-<p align="center">
-H A R S H I T  
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-<p align="center">
-𝗧𝗘𝗔𝗠 𝗛𝗮𝗿𝘀𝗵𝗶𝘁  𝗕𝗢𝗧𝗦
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+# 🎵 HARSHU BOTS
 
-    ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
-</h3>
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Badnam019/KRITI_PUBLIC"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-00FFFF?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<p align="center">
+
+<img src="https://img.shields.io/badge/HARSHU-BOTS-5865F2?style=for-the-badge&logo=telegram&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/TELEGRAM-MUSIC%20BOT-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/AI-ASSISTANT-10A37F?style=for-the-badge&logo=openai&logoColor=white"/>
+
+</p>
+
+<p align="center">
+  <b>🎧 Fast • Powerful • Smooth • AI Powered</b>
+</p>
+
+<p align="center">
+  <i>A modern Telegram Music & AI Bot built by Harshit Kashyap.</i>
+</p>
+
+---
+
+## ✨ ABOUT
+
+**HARSHU BOTS** is a powerful Telegram bot designed for
+high-quality music playback, fast searching and AI-powered
+assistance.
+
+Built for Telegram groups and voice chats with a clean,
+fast and user-friendly experience.
+
+---
+
+## 🚀 FEATURES
+
+| Feature | Status |
+|---|---|
+| 🎵 YouTube Music | ✅ |
+| 🔊 Voice Chat Playback | ✅ |
+| 🎧 High Quality Audio | ✅ |
+| ⚡ Fast Search | ✅ |
+| ▶️ Play / Pause / Resume | ✅ |
+| ⏭️ Skip / Stop | ✅ |
+| 📋 Queue System | ✅ |
+| 🤖 AI Assistant | ✅ |
+| 🛡️ Admin Controls | ✅ |
+| 💾 MongoDB Database | ✅ |
+| 🌐 YouTube Support | ✅ |
+| 👥 Group & Channel Support | ✅ |
+
+---
+
+# 🎵 MUSIC COMMANDS
+
+```text
+/play <song name>
+/pause
+/resume
+/skip
+/stop
+/queue
