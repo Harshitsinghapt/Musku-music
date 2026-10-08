@@ -4,14 +4,14 @@ import os
 
 from aiohttp import web
 from pyrogram import idle
-from pytgcalls.exceptions import NoActiveGroupCall
+from pyrogram.errors import NoActiveGroupCall
 
 import config
 from ShiviMusic import LOGGER, app, userbot
 from ShiviMusic.core.call import Shivi
 from ShiviMusic.misc import sudo
 from ShiviMusic.plugins import ALL_MODULES
-from ShiviMusic.utils.database import get_banned_users, get_gbanned
+from ShiviMusic.utils.database import get_banned_users, get_banned
 from config import BANNED_USERS
 
 
@@ -44,7 +44,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER(__name__).error(
-            "STRING SESSION NOT FILLED. PLEASE FILL A PYROGRAM SESSION."
+            "STRING SESSION NOT FILLED, PLEASE FILL A PYROGRAM SESSION."
         )
         exit()
 
@@ -53,7 +53,7 @@ async def init():
     web_runner = await start_web_server()
 
     try:
-        users = await get_gbanned()
+        users = await get_banned()
         for user_id in users:
             BANNED_USERS.add(user_id)
 
@@ -66,7 +66,7 @@ async def init():
     await app.start()
 
     for all_module in ALL_MODULES:
-        importlib.import_module("ShiviMusic.plugins" + all_module)
+        importlib.import_module("ShiviMusic.plugins." + all_module)
 
     LOGGER("ShiviMusic.plugins").info(
         "ALL PLUGINS LOADED SUCCESSFULLY..."
@@ -77,10 +77,10 @@ async def init():
 
     try:
         await Shivi.stream_call(
-            "https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4"
+            "https://telegra.ph/file/29f784eb49d230ab62e9e.mp4"
         )
     except NoActiveGroupCall:
-        LOGGER("ShiviMusic").error(
+        LOGGER(__name__).error(
             "PLEASE START YOUR LOG GROUP/CHANNEL VOICECHAT."
         )
         exit()
