@@ -4,19 +4,19 @@ import os
 
 from aiohttp import web
 from pyrogram import idle
-from pyrogram.errors import NoActiveGroupCall
+from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from ShiviMusic import LOGGER, app, userbot
 from ShiviMusic.core.call import Shivi
 from ShiviMusic.misc import sudo
 from ShiviMusic.plugins import ALL_MODULES
-from ShiviMusic.utils.database import get_banned_users, get_banned
+from ShiviMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
 
 async def health(request):
-    return web.Response(text="Musku Music Bot is running!")
+    return web.Response(text="OK")
 
 
 async def start_web_server():
@@ -27,11 +27,11 @@ async def start_web_server():
     runner = web.AppRunner(web_app)
     await runner.setup()
 
-    port = int(os.environ.get("PORT", 10000))
+    port = int(os.environ.get("PORT", "10000"))
     site = web.TCPSite(runner, "0.0.0.0", port)
     await site.start()
 
-    LOGGER(__name__).info(f"Web server started on port {port}")
+    LOGGER(__name__).info(f"WEB SERVER STARTED ON PORT {port}")
     return runner
 
 
@@ -44,7 +44,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER(__name__).error(
-            "STRING SESSION NOT FILLED ⚠️, PLEASE FILL A PYROGRAM SESSION."
+            "STRING SESSION NOT FILLED. PLEASE FILL A PYROGRAM SESSION."
         )
         exit()
 
@@ -53,7 +53,7 @@ async def init():
     web_runner = await start_web_server()
 
     try:
-        users = await get_banned()
+        users = await get_gbanned()
         for user_id in users:
             BANNED_USERS.add(user_id)
 
@@ -66,16 +66,18 @@ async def init():
     await app.start()
 
     for all_module in ALL_MODULES:
-        importlib.import_module("ShiviMusic.plugins." + all_module)
+        importlib.import_module("ShiviMusic.plugins" + all_module)
 
-    LOGGER("ShiviMusic.plugins").info("ALL PLUGINS LOADED SUCCESSFULLY...")
+    LOGGER("ShiviMusic.plugins").info(
+        "ALL PLUGINS LOADED SUCCESSFULLY..."
+    )
 
     await userbot.start()
     await Shivi.start()
 
     try:
         await Shivi.stream_call(
-            "https://telegra.ph/file/29f784eb49d230ab62e9.mp4"
+            "https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4"
         )
     except NoActiveGroupCall:
         LOGGER("ShiviMusic").error(
@@ -87,7 +89,9 @@ async def init():
 
     await Shivi.decorators()
 
-    LOGGER("ShiviMusic").info("MUSIC BOT STARTED SUCCESSFULLY...")
+    LOGGER("ShiviMusic").info(
+        "MUSIC BOT STARTED SUCCESSFULLY..."
+    )
 
     await idle()
 
