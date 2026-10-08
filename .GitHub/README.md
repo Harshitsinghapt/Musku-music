@@ -1,9 +1,9 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <p align="center">
-𝐁 𝐀 𝐃 𝐍 𝐀 𝐌 
+H A R S H I T  
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <p align="center">
-𝗧𝗘𝗔𝗠 𝗞𝗥𝗜𝗧𝗜 𝗕𝗢𝗧𝗦
+𝗧𝗘𝗔𝗠 𝗛𝗮𝗿𝘀𝗵𝗶𝘁  𝗕𝗢𝗧𝗦
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
